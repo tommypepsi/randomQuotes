@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -5,15 +6,24 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/vibrant.js"></script>
     <script src="js/script.js"></script>
     <title>random quotes generator</title>
   </head>
   <body>
-    <div id="container">
-      <div id="quotes"></div>
-      <div id="buttons">
-        <button id="next">Random</button>
-        <a id="twitter" href=""><i class="fa fa-twitter"></i></a>
+    <div id="loader"></div>
+    <div id="wrapper">
+      <div id="imgBackground"></div>
+
+      <div id="container">
+        <div id="quotes">
+          <div id="quote"></div>
+          <div id="author"></div>
+        </div>
+        <div id="buttons">
+          <button id="next">ANOTHER QUOTE</button>
+          <a id="twitter" href=""><i class="fa fa-twitter"></i></a>
+        </div>
       </div>
     </div>
   </body>
