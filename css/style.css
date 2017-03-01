@@ -22,9 +22,10 @@ body{
   -ms-transform:translate(-50%, -50%);
   -webkit-transform:translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.8);
   color: white;
   width:70%;
+  max-width: 1000px;
   padding: 50px;
 }
 #quote{
@@ -35,13 +36,17 @@ body{
   margin-top: 20px;
 }
 #next{
-  margin-right: 20px;
+  margin-right: 50px;
   border: none;
   font-size: 20px;
   font-weight: bold;
   padding: 10px;
   border-radius: 5px;
   outline: none;
+  cursor: pointer;
+}
+#twitter{
+  font-size: 30px;
 }
 
 #loader {
