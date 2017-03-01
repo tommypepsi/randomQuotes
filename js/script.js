@@ -31,7 +31,7 @@ function newQuote(){
   newBackground.src = "https://unsplash.it/"+ windowWidth +"/"+ windowHeight +"/?random&test=" + Math.random()
   newBackground.alt = ""
   newBackground.id = "background"
-  newBackground.setAttribute('crossOrigin', 'anonymous') 
+  newBackground.setAttribute('crossOrigin', 'anonymous')
 
   //and when it is loaded we call the quote
   newBackground.onload = function() {
@@ -41,7 +41,7 @@ function newQuote(){
 
     //cache needs to be false or the quotes won't change
     $.ajaxSetup({ cache: false});
-    $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", function (json)
+    $.getJSON("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", function (json)
     {
       let quote = json[0].content
       let author = " —"  + json[0].title
