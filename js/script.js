@@ -31,6 +31,7 @@ function newQuote(){
   newBackground.src = "https://unsplash.it/"+ windowWidth +"/"+ windowHeight +"/?random&test=" + Math.random()
   newBackground.alt = ""
   newBackground.id = "background"
+  newBackground.setAttribute('crossOrigin', 'anonymous') 
 
   //and when it is loaded we call the quote
   newBackground.onload = function() {
