@@ -50,12 +50,16 @@ function newQuote(){
     {
       let quote = json[0].content
       let author = " —"  + json[0].title
-      let quoteTweet = truncateString(quote.replace(/<\/?[^>]+(>|$)/g, "") , 140 - author.length)
+      let quoteTweet = truncateString(quote.replace(/<\/?[^>]+(>|$)/g, "").replace(/&#8217;/g, "'")
+      .replace(/&#8211;/g, "-").replace(/&#8212;/g, "—")
+      .replace(/&#8220;/g, "“").replace(/&#8221;/g, "”") , 140 - author.length)
+
+      console.log(quoteTweet)
       quoteTweet += author
 
       $("#quote").html(quote)
       $("#author").html(author)
-      $("#twitter").attr("href", "https://twitter.com/intent/tweet?text=" + quoteTweet)
+      $("#twitter").attr("href", "https://twitter.com/intent/tweet?text=" + encodeURIComponent(quoteTweet))
 
       $("#wrapper").css("opacity", "1")
       $("#next").css("cursor", "pointer")
